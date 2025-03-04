@@ -44,6 +44,52 @@ export const About = () => {
                 </div>
             
             </div>
+
+            <div className="grid grid-cols-1 grid-cols-2 gap-6 mt-8">
+                <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+                            <h3 className="text-xl font-bold mb-4">
+                              🎓 Education
+                            </h3>
+                            <ul className="list-disc list-inside text-gray-300 space-y-2">
+                                <li>
+                                    <strong> B.E in Computer Science and University</strong>
+                                    Visvesvaraya Technological University[2017 - 2021]
+                                </li>
+                                <li>
+                                    Relevant Coursework: Data Structures, Web Development, Cloud Computing....
+                                </li>
+                            </ul>
+                </div>
+                <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+                            <h3 className="text-xl font-bold mb-4">
+                              💼 Work Experience
+                            </h3>
+                            <div className="space-y-4 text-gray-300">
+                                <div>
+                                    <h4 className="font-semibold">
+                                        Software Engineer at Accenture India Pvt. Ltd. [2021 - 2023]
+                                    </h4>
+                                    <p>
+                                        I maintained and optimized microservices for BestBuy’s online platform, ensuring high availability and performance. As a Frontend Developer, 
+                                        I enhanced web pages to improve efficiency across release cycles and built a Python automation bot to streamline support operations. 
+                                        Previously, as an Application Development Associate at SAP Labs, I developed enterprise-grade web applications using SAPUI5, JavaScript, and OData, optimizing performance and integrating backend services for seamless data handling.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <h4 className="font-semibold">
+                                        Front-end developer Intern at Hermitcrabs Technologies, Inc [2020]
+                                    </h4>
+                                    <p>
+                                    Directed optimization of a website, addressing challenges, implementing data-driven improvements, and collaborating on inbound
+                                    marketing for enhanced performance.
+                                    </p>
+                                </div>
+                            </div>
+                </div>
+
+            </div>
+
         </div>
     </section>
 }
