@@ -19,7 +19,7 @@ export const Home = (onComplete) => {
                     onComplete();
                 },1000);
             }
-        }, 80);
+        }, 90);
 
         return() => clearInterval(interval);
     },[onComplete])
