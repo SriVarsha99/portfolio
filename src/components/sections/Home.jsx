@@ -1,6 +1,32 @@
+import { useEffect, useState } from "react"
 import { RevealOnScroll } from "../RevealOnScroll"
 
+const Typewrite = ({ text, speed = 80}) => {
+    console.log("text: ", text);
+    const [displayText, setDisplayText] = useState("");
+
+    useEffect(() => {
+        let i = 0;
+        setDisplayText("");
+        const interval = setInterval(() => {
+            if(i < text.length){
+                setDisplayText(text.slice(0, i + 1));
+                i++;
+            } else{
+                clearInterval(interval);
+            }
+        }, speed);
+
+        return () => clearInterval(interval);
+    },[text, speed]);
+
+    return <h1 className="text-5xl ms:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to to-purple-600 bg-clip-text text-transparent leading-right ">
+                {displayText}
+            </h1>
+}
+
 export const Home = () => {
+
     return <section 
     id="home"
     className="min-h-screen flex items-center justify-center relative"
@@ -8,9 +34,7 @@ export const Home = () => {
         <RevealOnScroll>
 
         <div className="text-center z-10 px-4">
-            <h1 className="text-5xl ms:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to to-purple-600 bg-clip-text text-transparent leading-right ">
-                Hi, I am Srivarsha
-            </h1>
+            <Typewrite text="Hi, I am Srivarsha"/>
 
             <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
             I am pursuing my Master's in Computer Science and Engineering at Santa Clara University, where I am deepening my expertise in web technologies, distributed systems, and user-centric design. My academic journey has provided me with a strong foundation in software development and problem-solving, equipping me with the skills necessary to contribute effectively to your team.
