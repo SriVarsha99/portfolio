@@ -19,24 +19,24 @@ export const Home = (onComplete) => {
                     onComplete();
                 },1000);
             }
-        }, 100);
+        }, 80);
 
         return() => clearInterval(interval);
     },[onComplete])
 
     return <section 
     id="home"
-    className="min-h-screen flex items-center justify-center relative"
+    className="min-h-screen flex items-center justify-evenly relative"
     >
         <RevealOnScroll>
 
-        <div className="text-center z-10 px-4">
+        <div className="text-center z-4 px-4">
         <h1 className="text-5xl ms:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to to-purple-600 bg-clip-text text-transparent leading-right ">
                 {text}<span className="text-white animate-blink ml-1"> | </span>
             </h1>
 
             <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-            I am pursuing my Master's in Computer Science and Engineering at Santa Clara University, where I am deepening my expertise in web technologies, distributed systems, and user-centric design. My academic journey has provided me with a strong foundation in software development and problem-solving, equipping me with the skills necessary to contribute effectively to your team.
+            a passionate and results-driven technology professional with a strong foundation in software development and system optimization. With experience in developing and enhancing applications, automating processes, and improving system efficiency, I thrive on solving complex challenges and building innovative solutions. Continuously learning and adapting to new technologies, I am dedicated to creating impactful and scalable advancements in the tech industry.
             </p>
 
             <div className="flex justify-center space-x-4">
